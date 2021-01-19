@@ -1,0 +1,24 @@
+{
+    "name": "climageoLoc",
+    "version": "1.0.0",
+    "description": "",
+    "main": "app.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/matcop/nodeGeoLoc.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/matcop/nodeGeoLoc/issues"
+    },
+    "homepage": "https://github.com/matcop/nodeGeoLoc#readme",
+    "dependencies": {
+        "axios": "^0.21.1",
+        "yargs": "^16.2.0"
+    }
+}
