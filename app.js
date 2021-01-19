@@ -9,17 +9,22 @@ const argv = require('yargs').options({
     }
 }).argv;
 
-console.log(argv.direccion);
 const encodedUrl = encodeURI(argv.direccion);
 
+console.log(encodedUrl);
+
 const instance = axios.create({
-    baseURL: `https://devru-latitude-longitude-find-v1.p.rapidapi.com/latlon.php?location=${encodedUrl}`,
-    headers: { 'X-RapidAPI-Key': 'fb81986a37msh6fb410231ed5fc2p1b4017jsneb7b44d07b77' }
+    baseURL: `http://api.weatherapi.com/v1/current.json?key=&q=${encodedUrl}`,
+    headers: {
+        key: 'cd7faef4f11c404f805143448211901',
+
+
+    }
 });
 
 instance.get()
     .then(resp => {
-        console.log(resp.data);
+        console.log(resp.data.location.country);
     })
     .catch(err => {
         console.log(err);
