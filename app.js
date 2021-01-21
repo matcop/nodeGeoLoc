@@ -1,6 +1,5 @@
-//const { require } = require('yargs');
-const lugar = require('./lugar/lugar');
-const clima= require('./clima/clima');
+
+const info=require('./getinfo/info');
 const argv = require('yargs').options({
     direccion: {
         alias: 'd',
@@ -10,10 +9,5 @@ const argv = require('yargs').options({
     }
 }).argv;
 
-// lugar.getLugarLatLng(argv.direccion)
-//     .then(console.log)
-   //una funcion async a fuerza regresa una promesa asi;
-
-   clima.getclima(-16.53,-68.20)
-   .then(console.log)
-   .catch(console.log)
+info.getinfo(argv.direccion)
+.then(console.log)
